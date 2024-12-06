@@ -45,6 +45,6 @@ class GameList extends Model
 
     public function getImgUrlAttribute()
     {
-        return asset('/game_logo/'.$this->image);
+        return asset('/game_list/'.$this->image);
     }
 }

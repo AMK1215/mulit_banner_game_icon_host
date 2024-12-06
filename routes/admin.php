@@ -25,6 +25,8 @@ use App\Http\Controllers\Admin\TransferLog\TransferLogController;
 use App\Http\Controllers\Admin\WithDraw\WithDrawRequestController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\GameListImageURLUpdateController;
+
 
 Route::group([
     'prefix' => 'admin',
@@ -60,7 +62,15 @@ Route::group([
     Route::resource('paymentTypes', PaymentTypeController::class);
     Route::resource('bank', BankController::class);
 
-    // provider Game Type Start
+    // provider Game Type
+
+
+    // Route::get('/game-list', [GameListImageURLUpdateController::class, 'index'])->name('game_list.index');
+
+    Route::get('game-list/{gameList}/edit', [GameListImageURLUpdateController::class, 'edit'])->name('game_list.edit');
+    Route::post('/game-list/{id}/update-image-url', [GameListImageURLUpdateController::class, 'updateImageUrl'])->name('game_list.update_image_url');
+
+
     Route::get('gametypes', [GameTypeProductController::class, 'index'])->name('gametypes.index');
     Route::get('gametypes/{game_type_id}/product/{product_id}', [GameTypeProductController::class, 'edit'])->name('gametypes.edit');
     Route::post('gametypes/{game_type_id}/product/{product_id}', [GameTypeProductController::class, 'update'])->name('gametypes.update');
