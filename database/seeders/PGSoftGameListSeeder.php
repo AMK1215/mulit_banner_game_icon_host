@@ -15,7 +15,7 @@ class PGSoftGameListSeeder extends Seeder
     public function run(): void
     {
         // Load the JSON file
-        $json = File::get(base_path('database/seeders/data/PGSOFT.json'));
+        $json = File::get(base_path('database/seeders/data/UpdatedPGSOFTSlot.json'));
         $data = json_decode($json, true);
 
         // Loop through each game in the JSON data

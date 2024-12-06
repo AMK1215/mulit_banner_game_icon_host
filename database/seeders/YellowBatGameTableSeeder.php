@@ -15,7 +15,7 @@ class YellowBatGameTableSeeder extends Seeder
     public function run(): void
     {
         // Load the JSON file
-        $json = File::get(base_path('database/seeders/data/YBAT.json'));
+        $json = File::get(base_path('database/seeders/data/UpdatedYBATSlot.json'));
         $data = json_decode($json, true);
 
         // Loop through each game in the JSON data

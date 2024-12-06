@@ -15,7 +15,7 @@ class CQ9GameTableSeeder extends Seeder
     public function run(): void
     {
         // Load the JSON file
-        $json = File::get(base_path('database/seeders/data/CQ9.json'));
+        $json = File::get(base_path('database/seeders/data/UpdatedCQ9Slot.json'));
         $data = json_decode($json, true);
 
         // Loop through each game in the JSON data

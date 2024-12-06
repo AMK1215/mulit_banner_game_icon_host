@@ -15,7 +15,7 @@ class EVOPLAYGameTableSeeder extends Seeder
     public function run(): void
     {
         // Load the JSON file
-        $json = File::get(base_path('database/seeders/data/EVOPLAY.json'));
+        $json = File::get(base_path('database/seeders/data/UpdatedEVOPLAYSlot.json'));
         $data = json_decode($json, true);
 
         // Loop through each game in the JSON data

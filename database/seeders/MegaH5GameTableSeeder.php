@@ -15,7 +15,7 @@ class MegaH5GameTableSeeder extends Seeder
     public function run(): void
     {
         // Load the JSON file
-        $json = File::get(base_path('database/seeders/data/MGH5.json'));
+        $json = File::get(base_path('database/seeders/data/UpdatedMGH5Slot.json'));
         $data = json_decode($json, true);
 
         // Loop through each game in the JSON data

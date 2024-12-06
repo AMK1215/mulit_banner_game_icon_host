@@ -15,7 +15,7 @@ class JDBGameTableSeeder extends Seeder
     public function run(): void
     {
         // Load the JSON file
-        $json = File::get(base_path('database/seeders/data/JDB.json'));
+        $json = File::get(base_path('database/seeders/data/UpdatedJDBSlot.json'));
         $data = json_decode($json, true);
 
         // Loop through each game in the JSON data

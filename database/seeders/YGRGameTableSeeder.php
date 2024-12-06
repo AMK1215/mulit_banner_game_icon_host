@@ -15,7 +15,7 @@ class YGRGameTableSeeder extends Seeder
     public function run(): void
     {
         // Load the JSON file
-        $json = File::get(base_path('database/seeders/data/YGR.json'));
+        $json = File::get(base_path('database/seeders/data/UpdatedYGRSlot.json'));
         $data = json_decode($json, true);
 
         // Loop through each game in the JSON data
