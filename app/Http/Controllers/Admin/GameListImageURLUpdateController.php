@@ -40,7 +40,7 @@ class GameListImageURLUpdateController extends Controller
             'image_url' => $request->input('image_url'),
         ]);
 
-        return redirect()->route('admin.game_list.index')->with('success', 'Image URL updated successfully.');
+        return redirect()->route('admin.gameLists.index')->with('success', 'Image URL updated successfully.');
     }
 
 }
